@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+<head>
+    <meta charset="utf-8">
+
+    <title>Los reyes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=1024">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/Login.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+  <div class="btl">
+    <a class="" href="/main">REGRESAR</a>
+  </div>
+
+  <div class="root-box"> 
+  <div class="container mt-3">
+
+    <table style="margin-top: 4%; margin-left: 3%;">
+    <tr>
+      <th><h1 style="color: #d8aa46">Citas</h1></th>
+      <th > <a href="/cortes"><h1 style="margin-left: 40%;">Cortes</h1></a></th>
+      
+    </tr>
+
+    </table>
+    <form action="/root">
+      <button class="searcher" style="margin-left:86%;"> mostrar todo</button>
+    </form>
+
+
+    <div class="search">
+
+    <form action="/search">
+      <input type="date" id="citas" name="citas" value=2023-04-27>
+      <button class="searcher"> Buscar por fecha</button>
+    </form>
+    </div>
+
+
+    <form action="/eliminar"></form>
+      <table class="customers" style="width: 100%;">
+        <thead>
+
+          <tr class="table-primary">
+            <th>No.</th>
+            <th>Nombre</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Barbero</th>
+            <th>Eliminar Cita</th>
+          </tr>
+        </thead>
+        <tbody class>
+          <% if(data.length){ for(var i = 0; i < data.length; i++) {%>
+            <tr>
+              <th><%= (i+1) %></th>
+              <td><%= data[i].cliente%></td>
+              <td><%= data[i].citas.toLocaleDateString('es-ES')%></td>
+              <td><%= data[i].hora%></td>
+              <td><%= data[i].barbero%></td>
+              <td>
+                <a class="btn btn-dark" href="/eliminar/<%= data[i].cliente%>/<%= data[i].citas%>/<%= data[i].hora%>/<%= data[i].barbero%>">Borrar</a>
+              </td>
+            </tr>
+            <% } }else{ %>
+            <tr>
+              <td colspan="5" >No hay citas pendientes</td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+      </form>
+    </div>
+
+              
+    </div>
+   
+      
+    <script src="js/vendor/jquery-1.10.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/jquery.easing-1.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

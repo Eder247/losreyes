@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+<head>
+    <meta charset="utf-8">
+
+    <title>Los reyes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=1024">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/Login.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+</head>
+<body>
+  <div class="btl">
+    <a class="" href="/main">REGRESAR</a>
+  </div>
+
+
+  <div class="root-box" style="height:fit-content;"> 
+  <div class="container mt-3">
+    <table style="margin-top: 4%; margin-left: 3%;">
+      <tr>
+        <th><a href="/root"><h1 >Citas</h1></th>
+        <th ><h1 style="margin-left: 40%; color: #d8aa46;">Cortes</h1></th>
+        
+      </tr>
+  
+      </table>
+      <table class="customers" style="width: 100%; height: 100%;">
+        <thead>
+          <tr class="table-primary">
+            <th>Corte</th>
+            <th>Precio</th>
+            <th>Editar cita</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if(data.length){ for(var i = 0; i < data.length; i++) {%>
+            <tr>
+              <td><%= data[i].corte%></td>
+              <td><%= data[i].precio%></td>
+              <td>
+                <a class="btn btn-dark" href="/editar/<%= data[i].corte%>">editar</a>
+              </td>
+            </tr>
+            <% } }else{ %>
+            <tr>
+              <td colspan="5" >No hay citas pendientes</td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+      </form>
+    </div>
+    </div>
+   
+
+                    
+    <script src="js/vendor/jquery-1.10.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/jquery.easing-1.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

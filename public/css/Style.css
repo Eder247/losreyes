@@ -1,0 +1,596 @@
+
+
+/* DISEÑO DEL BOTON*/
+.btl{
+    width:15%;
+    display:block;
+}
+.btl a {
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    text-transform: uppercase;
+    outline: 0;
+    border: 0;
+    padding: 1rem;
+  }
+  
+.btl a:before {
+    background-color: #fff;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    margin-right: 10px;
+    transition: all .42s cubic-bezier(.25,.8,.25,1);
+    width: 0;
+  }
+  
+.btl a:hover:before {
+    background-color: #fff;
+    width: 3rem;
+  }
+
+/*Diseño de la pagina*/
+
+/* ==========================================================================
+    INICIO
+   ========================================================================== */
+.inicio 
+{
+    display: block;
+}
+.inicio p
+{
+    background-color: #c7cdd8;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.menu-wrapper ul.menu, ul.tabs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.spacing {
+	margin-bottom: 40px;
+}
+
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+
+
+.toggle-content p{
+    font-size: 18px;
+}
+html, body {
+    font-size: 100%;
+    width: 100%;
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: baseline;
+    
+}
+
+body {
+    font: 13px/19px "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    background-image: url(/images/Wallpaper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:#333333;
+    background-blend-mode: multiply;
+}
+
+a {
+
+    text-decoration: none !important;
+    -webkit-transition: all 200ms ease-in;
+    -moz-transition: all 200ms ease-in;
+    -ms-transition: all 200ms ease-in;
+    -o-transition: all 200ms ease-in;
+    transition: all 200ms ease-in;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #333333;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.reyes{
+    width: 100%;
+}
+
+.container-fluid {
+    padding: 60px 80px;
+}
+
+.content {
+    display: none;
+}
+
+/* ==========================================================================
+    Header Site Styling
+   ========================================================================== */
+.sidebar-menu {
+    position: relative;
+    z-index: 9;
+    padding-right: 80px;
+}
+
+.logo-wrapper {
+    background-color: #e5e8ed;
+    text-align: center;
+    padding: 40px;
+    
+}
+
+.logo-wrapper h1 {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+   
+}
+
+.logo-wrapper h1 span
+ {
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #777777;
+}
+
+.menu-wrapper {
+    display: block;
+}
+
+.menu-wrapper ul.menu {
+    display: none;
+    background-color: white;
+    text-align: center;
+}
+
+.menu-wrapper ul.menu li {
+    border-top: 1px solid #c7cdd8;
+}
+
+.menu-wrapper ul.menu li a {
+    text-transform: uppercase;
+    display: block;
+    padding: 18px 30px;
+    color: #333333;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.menu-wrapper a.toggle-menu {
+    display: block;
+    background-color: #d8aa46;
+    color: white;
+    text-align: center;
+}
+
+.menu-wrapper a.toggle-menu i {
+    padding: 10px 20px;
+    font-size: 24px;
+}
+
+
+/* ==========================================================================
+    About Styling
+   ========================================================================== */
+.toggle-content {
+    margin-top: 30px;
+    display: block;
+    padding: 30px;
+    background-color: white;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-clip: padding-box;
+}
+
+.icon-item {
+    margin-bottom: 30px;
+    padding: 40px 30px;
+    background-color: white;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-clip: padding-box;
+    display: block;
+}
+
+.icon-item i {
+    font-size: 36px;
+}
+
+.icon-item.active {
+    background-color: #d8aa46;
+    color: white;
+}
+.icon-item:hover{
+    color:red;
+}
+
+ul.tabs {
+    text-align: center;
+    display: block;
+}
+
+.member-item {
+    margin-top: 30px;
+    overflow: hidden;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */;
+}
+
+.member-item .thumb {
+    width: 100%;
+    overflow: hidden;
+}
+
+.member-item .thumb img {
+    width: 100%;
+}
+
+.member-item h4 {
+    margin: 20px 0 10px 0;
+}
+
+.member-item span {
+    text-transform: uppercase;
+    color: #d8aa46;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+GALERIA DE CORTES
+========================================================================== */
+.h1class
+{
+    display: block;
+    color: aliceblue;
+    margin-left: 38%;
+}
+
+.card 
+{
+    width: 350px;
+    height: 45px;
+    background: white;
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+   
+.shadow
+{
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+                0 0  0 2px rgb(190, 190, 190),
+                0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+.g-item
+{
+    width: 40%;
+    height: 40%;
+
+}
+.g-item img
+{   
+    margin: 10px;
+    width: 350px;
+    height: 350px;
+}
+
+.g-item p
+{
+
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    width: 350px;
+}
+/* ==========================================================================
+        Tabla de precios
+========================================================================== */
+
+.row2::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.customers{
+ box-sizing: border-box;  
+ float: left;
+ width: 50%;
+ padding: 5px; 
+}
+  
+.customers td, #customers th {
+    border: 1px solid #ddd;
+    padding:1px;
+  }
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+.customers tr:hover {background-color: #ddd;}
+  
+.customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #000000;
+    color: white;
+  }
+  
+
+  .customers2{
+    box-sizing: border-box;  
+    float: left;
+    margin-left: 3%;
+    margin-top: 8%;
+    padding: 5px; 
+   }
+     
+   .customers2 td, #customers th {
+       border: 1px solid #ddd;
+       padding: 8px;
+     }
+   
+   .customers2 tr:nth-child(even){background-color: #f2f2f2;}
+     
+   .customers2 tr:hover {background-color: #ddd;}
+     
+   .customers2 th {
+       padding-top: 12px;
+       padding-bottom: 12px;
+       text-align: left;
+       background-color: #000000;
+       color: white;
+     }
+
+
+
+
+/* ==========================================================================
+        Agenda aceptada
+========================================================================== */
+
+
+.pack-container {
+    position: relative;
+    display: flex;
+    max-width: 350px;
+    flex-direction: column;
+    border-radius: 12px;
+    background-color: #212121;
+    border: 1px solid #fff;
+    padding: 1.6rem;
+    color: #fff;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    margin-left: 40%;
+    margin-top: 10%;
+  }
+  
+  .pack-container header {
+    position: relative;
+    margin: 0;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    padding-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .pack-container title {
+    display: block;
+    font-family: sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    color: #fff
+  }
+  
+  .price-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+    font-family: sans-serif;
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+  
+  .price-container span:first-child {
+    margin-top: 10px;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  
+  .price-container span:last-child {
+    align-self: flex-end;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  
+  .lists {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .list span {
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    background-color: rgba(255, 255, 255, 0.185);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .list span svg {
+    height: 12px;
+    width: 12px;
+  }
+  
+  .list p {
+    display: block;
+    font-family: sans-serif;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+    padding: 0;
+  }
+  
+  .button-container button {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #000;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  /* ==========================================================================
+        Diseño del root
+========================================================================== */
+
+.root-box
+{
+border-radius: 1%;
+display:block;
+background-color: aliceblue;
+width:fit-content;
+height:70%;
+margin-top:5%;
+margin-left:20%;
+}
+
+.table_opt
+{
+    height:10%;
+
+}
+
+/* ==========================================================================
+        Galeria
+========================================================================== */
+.galeria
+{
+    margin-top: 10%;
+    width:fit-content;
+    height:fit-content;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+.galeria h1
+{
+    margin-left:39%;
+}
+
+.Tablafotos td
+{
+    padding:5px;
+    width: 30%;
+    height:30%;
+}
+
+.Tablafotos img
+{
+    width: 240px;
+    height: 240px;
+}
+
+
+
+.search
+{
+    margin-left:70%;
+    padding:10px;
+}
+
+.searcher{
+    background-color: #000000;
+    color: #f7f1f1;
+    height:39px;
+
+ }

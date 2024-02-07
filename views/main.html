@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+<head>
+    <meta charset="utf-8">
+
+    <title>Los reyes</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/Style.css">
+    <link rel="stylesheet" href="css/Login.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="bg-overlay"></div>
+    <div class="btl">
+        <a class="" href="index.html">Cerrar sesión</a>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+   
+            <div class="col-md-4 col-sm-12">
+                <div class="sidebar-menu">
+                    
+                    <div class="logo-wrapper">
+                        <h1 class="logo">
+                            <a href="#"><img src="images/logo.png" class="reyes" alt="Los reyes barber shop">
+                        </h1>
+                    </div>
+                    
+
+                    <div class="menu-wrapper">
+                        
+                        <ul class="menu">
+                            <li><a class="show-1" href="#">Inicio</a></li>
+                            <li><a class="show-2" href="#">Acerca de nosotros</a></li>
+                            <li><a class="show-3" href="#">Cortes disponibles</a></li>
+                            <li><a class="show-4" href="#">Agendar cita</a></li>
+
+                        </ul>
+                        <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="col-md-8 col-sm-12">
+                
+                <div id="menu-container">
+
+                    <div id="menu-2" class="about content">
+                        <div class="row">
+                            <ul class="tabs">
+                                <li class="col-md-4 col-sm-4">
+                                    <a href="#tab1" class="icon-item">
+                                        <i class="fa fa-users"></i>
+                                    </a> <!-- /.icon-item -->
+                                </li>
+
+                                <li class="col-md-4 col-sm-4">
+                                    <a href="#tab3" class="icon-item">
+                                        <i class="fa fa-bars"></i>
+                                    </a> <!-- /.icon-item -->
+                                </li>
+                            </ul> <!-- /.tabs -->
+                            <div class="col-md-12 col-sm-12">
+                                <div class="toggle-content text-center" id="tab1">
+                                    <h3>Equipo</h3>
+                                     <p>Tenemos experiencia en la barberia y en los trabajos más pesados, hemos hecho cortes de todo tipo, incluyendo los más populares
+                                        como <br> "Buzz,Fade,Tapper, y naturales", támbien contamos con trabajos más profesionales y poco comúnes, como "Slicked, Jelly, Boomerang"
+                                        <br> por mencionar algunos.
+                                     </p>
+                                </div>
+                                <div class="toggle-content text-center" id="tab3">
+                                    <h3>Localización</h3>
+                                    <p>Actualmente nos encontramos en la colonia Jardines del aereopuerto, en la calle Zepelin #9564<br>
+                                        Frente a la michoacana a un lado del parque.</p>
+                                </div>
+                            </div> <!-- /.col-md-12 -->
+                        </div> <!-- /.row -->
+
+                        <div class="row">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="member-item">
+                                    <div class="thumb">
+                                        <img src="images/team/barbero1.PNG" alt="Barbero 1">
+                                    </div>
+                                    <h4>Jorge "Remmy"</h4>
+                                    <span>4 años de experiencia</span>
+                                </div> <!-- /.member-item -->
+                            </div> <!-- /.col-md-4 -->
+                            <div class="col-md-4 col-sm-4">
+                                <div class="member-item">
+                                    <div class="thumb">
+                                        <img src="images/team/barbero2.PNG" alt="Barbero 2">
+                                    </div>
+                                    <h4>"El lobo""</h4>
+                                    <span>2 años de experiencia</span>
+                                </div> <!-- /.member-item -->
+                            </div> <!-- /.col-md-4 -->
+                            <div class="col-md-4 col-sm-4">
+                                <div class="member-item">
+                                    <div class="thumb">
+                                        <img src="images/team/barbero3.PNG" alt="Barbero 3">
+                                    </div>
+                                    <h4>"Marcus"</h4>
+                                    <span>9 años de experiencia</span>
+                                </div> <!-- /.member-item -->
+                            </div> <!-- /.col-md-4 -->
+                        </div> <!-- /.row -->
+                    </div> <!-- /.about -->
+
+                    <div id="menu-3" class="about content">
+                        <div class="row">
+                            
+                                <div class="toggle-content text-center">
+                                <div class="row2">
+                                    <h2>Cortes disponibles</h2>
+                                   
+                                    <table class="customers">
+                                        <tbody>
+                                            <tr>
+                                                <th style="padding-left: 20%;font-size: 20px;">Servicio</th>
+                                                <th style="padding-left: 16%;font-size: 20px;">Precio</th>
+                                            </tr>
+                                            <% if(data.length){ for(var i = 0; i < data.length; i++) {%>
+                                              <tr>
+                                                <td><%= data[i].corte%></td>
+                                                <td><%= data[i].precio%></td>
+                                              </tr>
+                                              <% } }else{ %>
+                                              <tr>
+                                                <td colspan="5" >No hay citas pendientes</td>
+                                              </tr>
+                                              <% } %>
+                                          </tbody>
+                                    </table>
+                                      <table class="customers2">
+                                        <tr>
+                                            <th style="padding-left: 7%;font-size: 20px;">Servicio</th>
+                                            <th style="padding-left: 6%;font-size: 20px;">Precio</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Corte natural</td>
+                                            <td>$100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arreglo de barba</td>
+                                            <td>$60</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Depilación facial</td>
+                                            <td>$60</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Niños (Natural o fade)</td>
+                                            <td>Preguntar al barbero</td>
+                                        </tr>
+                                      </table>
+                                </div>
+                                        <p style="font-size: 16px;">Puedes pedir con anticipación algún corte en especial
+                                            (Para dudas contactar a la barbería directamente).
+                                        </p>
+                                </div>
+                        </div> <!-- /.row -->
+
+                    </div> <!-- /.about -->
+
+                    <div id="menu-1" class="about content">
+                        <div class="row">
+                            <div class="galeria">
+                            <h1>Cortes mas populares</h1>
+                            <table class="Tablafotos">
+                                <tr>
+                                    <td><img src="images/gallery/g1.PNG"></td>
+                                    <td><img src="images/gallery/g2.PNG"></td>
+                                    <td><img src="images/gallery/g3.PNG"> </td>
+                                </tr>
+                                <tr>
+                                    <td><img src="images/gallery/g4.png"> </td>
+                                    <td><img src="images/gallery/g5.PNG"></td>
+                                    <td><img src="images/gallery/g6.PNG"> </td>
+                                </tr>
+                            </table>
+                            </div>
+                        </div> <!-- /.row -->
+
+                    </div> <!-- /.about -->
+
+                    <div id="menu-4" class="contact content">
+                        <div class="row">
+                            <div class="ui container">
+                                <div class="login-box" style="margin-top: 30%">
+                                    <form action="/agendar">
+                                        <p>Agendar cita</p>
+                                    <p style="color: aliceblue; font-size: 20px;">Nombre del solicitante:</p>
+                                    <div class="textInputWrapper">
+                                    <input required="" name="cliente" type="text" id="cliente" class="textInput">
+                                    </div>
+                                    <p style="color: aliceblue; font-size: 20px;">Selecciona el barbero:</p>
+                                    <div class="box">
+                                    <select id="barbero" name="barbero" class="custom-select"> <option>Remmy</option> <option>Marcus</option> <option>El lobo</option> </select>
+                                    </div>
+                                    <table>
+                                        <tr>
+                                            <p style="color: aliceblue; font-size: 20px;">Selecciona La fecha:</p>
+                                            <th>
+                                            <input type="date" name="citas" id="citas" value=2023-04-27>
+                                            </th>
+                                            <th>
+                                                <div class="box-date">
+                                                <select id="barbero" name="hora" style="margin-left: 10px;"> 
+                                                    <option>12:00</option>
+                                                    <option>01:00</option>
+                                                    <option>02:00</option>
+                                                    <option>03:00</option>
+                                                    <option>04:00</option>
+                                                    <option>05:00</option>
+                                                    <option>06:00</option>
+                                                    <option>07:00</option>
+                                                    <option>08:00</option>
+                                                    <option>09:00</option>
+                                                </select>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <div class="box-date" style="margin-left: 25%;">
+                                                <select id="barbero" name="dia"> <option>PM</option> </select>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        </table>
+                                        <button id="boton" class="button" >Agendar</button>
+                                    </form>
+                                  </div>
+
+                        </div> <!-- /.row -->
+                    </div> <!-- /.gallery -->
+                    
+
+                    
+
+
+    <script src="js/vendor/jquery-1.10.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="js/jquery.easing-1.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
