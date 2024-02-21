@@ -182,7 +182,7 @@ class Server
               database: "los_reyes"
             });
           
-          con.query("delete from agenda where citas = ? and hora = ? and barbero = ?", [citas,hora,barbero], (err) => {
+          con.query("delete from Agenda where citas = ? and hora = ? and barbero = ?", [citas,hora,barbero], (err) => {
               if (err) {throw err;
               } else {
                 con.query('SELECT * FROM agenda ', function (err,rows,) {
