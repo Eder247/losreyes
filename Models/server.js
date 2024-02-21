@@ -141,7 +141,7 @@ class Server
               database: "los_reyes"
             });
         
-          con.query('SELECT * FROM agenda where citas = ? ', [citas], function (err,rows,) {
+          con.query('SELECT * FROM Agenda where citas = ? ', [citas], function (err,rows,) {
             if (err) {
               res.render('roots', { data: "" })
             } else {
@@ -185,7 +185,7 @@ class Server
           con.query("delete from Agenda where citas = ? and hora = ? and barbero = ?", [citas,hora,barbero], (err) => {
               if (err) {throw err;
               } else {
-                con.query('SELECT * FROM agenda ', function (err,rows,) {
+                con.query('SELECT * FROM Agenda ', function (err,rows,) {
                   if (err) {
                     req.flash(err)
                     res.render('roots', { data: '' })
