@@ -293,13 +293,11 @@ class Server
 
          this.app.get("/agendar",(request,response) =>
          {
-          const moment = require('moment');
-             const citas = moment(req.params.citas).format('YYYY-MM-DD');
+             let citas = request.query.citas;
              let barbero = request.query.barbero;
              let cliente = request.query.cliente;
              let hora = request.query.hora;
              let dia = request.query.dia;
-             
 
              let con = mysql.createConnection(
                  {   
