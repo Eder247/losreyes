@@ -299,6 +299,9 @@ class Server
              let hora = request.query.hora;
              let dia = request.query.dia;
  
+             const fecha = new Date(citas);
+             const fechaFormateada = fecha.toISOString().split('T')[0];
+
              let con = mysql.createConnection(
                  {   
                   host: "35.225.195.179",
