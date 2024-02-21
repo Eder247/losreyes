@@ -2,7 +2,6 @@
   "name": "serverbd1",
   "version": "1.0.0",
   "main": "app.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
@@ -20,6 +19,7 @@
     "express-flash": "^0.0.2",
     "express-session": "^1.17.3",
     "firebase": "^10.7.1",
+    "moment": "^2.30.1",
     "mongodb": "^6.3.0",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.22",
