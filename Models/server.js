@@ -308,7 +308,7 @@ class Server
                  });
  
              con.connect(function(err){if (err) throw err;});
-             con.query("Select * from Agenda where citas = ? and hora = ? and barbero = ?",[citas,hora,barbero],
+             con.query("Select * from agenda where citas = ? and hora = ? and barbero = ?",[citas,hora,barbero],
                function (err, results) 
                {
                  if (err) throw err;
