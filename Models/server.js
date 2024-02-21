@@ -298,9 +298,6 @@ class Server
              let cliente = request.query.cliente;
              let hora = request.query.hora;
              let dia = request.query.dia;
- 
-             const fecha = new Date(citas);
-             const fechaFormateada = fecha.toISOString().split('T')[0];
 
              let con = mysql.createConnection(
                  {   
@@ -311,7 +308,7 @@ class Server
                  });
  
              con.connect(function(err){if (err) throw err;});
-             con.query("Select * from Agenda where citas = ? and hora = ? and barbero = ?",[fechaFormateada,hora,barbero],
+             con.query("Select * from Agenda where citas = ? and hora = ? and barbero = ?",[citas,hora,barbero],
                function (err, results) 
                {
                  if (err) throw err;
@@ -330,12 +327,12 @@ class Server
                     }
                  else
                  {
-                  con.query("insert into Agenda values(?,?,?,?,?)",[barbero,fechaFormateada,cliente,hora,dia],
+                  con.query("insert into Agenda values(?,?,?,?,?)",[barbero,citas,cliente,hora,dia],
                   function (err, results) 
                      {
                       if (err) throw err;
                       {
-                          con.query("select * from Agenda where barbero = ? and citas = ? and cliente = ? and hora = ? and dia = ?",[barbero,fechaFormateada,cliente,hora,dia],
+                          con.query("select * from Agenda where barbero = ? and citas = ? and cliente = ? and hora = ? and dia = ?",[barbero,citas,cliente,hora,dia],
                           function (err, result)
                           {
                             if (err) throw err;
