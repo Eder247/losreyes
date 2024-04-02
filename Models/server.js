@@ -39,9 +39,9 @@ class Server
       
         con.query('SELECT * FROM Agenda ', function (err,rows,) {
           if (err) {
-            res.render('roots', { data: '' })
+            res.status(500).json({ error: err.message });
           } else {
-            res.json('roots', { data: rows })
+            res.json({ data: rows })
           }
         })
       });
