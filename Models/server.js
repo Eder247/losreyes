@@ -6,9 +6,12 @@ const ejs = require("ejs");
 var router = express.Router()
 const flash = require("connect-flash");
 const session = require("express-session");
+const nodemailer = require('nodemailer');
+
 
 class Server
 {
+
     constructor()
     {
         this.app = express();
@@ -28,6 +31,14 @@ class Server
 
     routes()
     {
+      const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'kirbyeder50@gmail.com', // Coloca aquí tu dirección de correo electrónico
+            pass: 'naui omfl pntq ekqp' // Coloca aquí tu contraseña de correo electrónico
+        }
+    });
+    
       this.app.get('/data', (req, res) => {
         let con = mysql.createConnection(
           {   
@@ -359,6 +370,19 @@ class Server
                               hora: result[0].hora,
                               dia: result[0].dia
                           }];
+                          const mailOptions = {
+                            from: 'kirbyeder50@gmail.com', // Dirección de correo electrónico del remitente
+                            to: 'kirbyeder@hotmail.com', // Dirección de correo electrónico del destinatario
+                            subject: 'Nueva cita creada', // Asunto del correo electrónico
+                            text: 'Se ha creado una nueva cita: ' + JSON.stringify(resultado) // Cuerpo del correo electrónico
+                        };
+                        transporter.sendMail(mailOptions, function(error, info){
+                          if (error) {
+                              console.log(error);
+                          } else {
+                              console.log('Email sent: ' + info.response);
+                          }
+                      });
                             {
                               response.render('res', {resultado});
                             }
