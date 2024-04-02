@@ -28,6 +28,23 @@ class Server
 
     routes()
     {
+      this.app.get('/data', (req, res) => {
+        let con = mysql.createConnection(
+          {   
+            host: "35.225.195.179",
+            user: "root",
+            password: "1234",
+            database: "los_reyes"
+          });
+      
+        con.query('SELECT * FROM Agenda ', function (err,rows,) {
+          if (err) {
+            res.render('roots', { data: '' })
+          } else {
+            res.json('roots', { data: rows })
+          }
+        })
+      });
 
         this.app.get("/admins",(request,response) =>
         {
